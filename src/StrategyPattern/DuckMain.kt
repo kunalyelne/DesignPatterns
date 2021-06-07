@@ -1,17 +1,20 @@
 package StrategyPattern
 
+import StrategyPattern.FlyBehaviours.FlyWithRocket
+
 fun main() {
     val rubberDuck  = RubberDuck()
     val mallardDuck = MallardDuck()
     val redHeadDuck = RedHeadDuck()
 
-
-    rubberDuck.fly()
-    rubberDuck.quack()
+    rubberDuck.performFly()
+    rubberDuck.performQuack()
+    rubberDuck.flyBehaviour = FlyWithRocket()
+    rubberDuck.performFly()
     //-------------------------------
-    mallardDuck.fly()
-    mallardDuck.quack()
+    mallardDuck.performFly()
+    mallardDuck.performQuack()
     //-------------------------------
-    redHeadDuck.fly()
-    redHeadDuck.quack()
+    redHeadDuck.performFly()
+    redHeadDuck.performQuack()
 }
