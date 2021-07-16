@@ -1,0 +1,4 @@
+package BehavioralPattern
+
+class xyz {
+}
